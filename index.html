@@ -32,7 +32,7 @@
         <h3>Hi, Myself</h3>
         <h1>Manya Aggarwal</h1>
         <h3>And I' m a <span class="multiple-text"></span></h3>
-        <p>Developer with a passion for learning and exploring tech related stuff. A beginner who is enthusiast in taking challenges and conquering those with presion and creativity.</p>
+        <p>Developer with a passion for learning and exploring tech related stuff. A beginner who is enthusiast in taking challenges and conquering those with precision and creativity.</p>
         <div class="social-media">
         <a href="https://www.linkedin.com/in/manya-aggarwal-37b31a290/"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://x.com/manya_0201"><i class="fa-brands fa-twitter"></i></a>
@@ -140,5 +140,19 @@
 
     <!--MAIN JS-->
     <script src="main.js"></script>
+
+    <script>
+        let url = 'https://script.google.com/macros/s/AKfycbw2CghAQVg7LDWpJtlQtIPUBm0m0lrg3-VYMHDurTbGmn6QliibSoqnNcYGNTTBVD-p/exec'
+        let form=document.querySelector('#contact');
+        form.addEventListener("submit",(e) =>{
+            let d=new FormData(form);
+            fetch(url,{
+                method:"POST",
+                body:d
+            }).then((res)=>res.text())
+            .then((finalRes)=>console.log(finalRes))
+            e.preventDefault
+        })
+    </script>
 </body>
 </html>
