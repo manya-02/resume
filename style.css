@@ -348,8 +348,18 @@ animation: floatImage 4s ease-in-out infinite;
         display: none;
     }
 
+    .navbar.active{
+        display: block;
+    }
+
     .home{
         flex-direction: column;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
     }
 
     .home-content h3{
